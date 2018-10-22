@@ -81,6 +81,7 @@ class designate::mdns (
 ) inherits designate {
 
   include ::designate::deps
+  include ::designate::db
 
   if $host and $port {
     warning('host and port parameters have been deprecated, please use listen instead.')
